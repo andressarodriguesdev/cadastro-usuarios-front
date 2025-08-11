@@ -3,20 +3,29 @@
 
 ## 📄 Descrição
 
-Este projeto é a interface de usuário (frontend) de um sistema completo de cadastro de usuários. Desenvolvido em React com Vite, o aplicativo oferece uma experiência responsiva e moderna para realizar operações de CRUD (criar, ler, atualizar, excluir) de usuários. 
+Este projeto é a interface de usuário (frontend) de um sistema completo de cadastro de usuários.
+
+Desenvolvido em React com Vite, o aplicativo oferece uma experiência responsiva e moderna para realizar operações de CRUD (criar, ler e excluir) de usuários. 
+
 O design é construído com o MUI (Material-UI), garantindo uma aparência limpa e profissional. Ele se comunica com uma API RESTful para gerenciar os dados.
 
 ## 🚀 FuncionalidadesCadastro de Usuários: 
 
 Formulário intuitivo para a criação de novos usuários.
+
 Listagem de Usuários: Exibição em tabela com todos os usuários cadastrados.
+
 Edição de Usuários: Interface para atualizar as informações de um usuário existente.
+
 Exclusão de Usuários: Funcionalidade para remover usuários do sistema.
 
-## 🛠️ TecnologiasReact: 
+## 🛠️ Tecnologias
+React: Biblioteca JavaScript para construir interfaces de usuário.
 
-Biblioteca JavaScript para construir interfaces de usuário.Vite: Ferramenta de build de front-end para um ambiente de desenvolvimento rápido.
+Vite: Ferramenta de build de front-end para um ambiente de desenvolvimento rápido.
+
 MUI (Material-UI): Biblioteca de componentes React para um design de alta qualidade.
+
 Axios: Cliente HTTP baseado em Promessas para fazer requisições à API.
 
 ## ⚙️ Instalação
