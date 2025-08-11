@@ -1,97 +1,291 @@
-.container {
+/* ==================================== */
+/* 2. Estilização dos Cartões (Formulário e Lista) */
+/* ==================================== */
+
+/* Estilos para mobile: fundo transparente e sem sombra */
+.form-card, .users-list-card {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 20px 15px; /* espaço lateral no mobile para evitar conteúdo colado */
+  margin-bottom: 20px; /* espaçamento entre os cards */
+}
+
+/* Cartão do formulário */
+.form-card {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ==================================== */
+/* 3. Estilização do Formulário e Cabeçalho */
+/* ==================================== */
+.header-form {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-top: 100px;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+
+ 
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-h1 {
-  color: rgb(42, 34, 88);
-  font-size: 28px;
+.header-form .form-title {
+  font-size: 2em;
+  font-weight: 600;
+  color: #fff; /* título branco no mobile */
+  margin: 0;
+  white-space: nowrap;
+   
+    border-radius: 20px;
+ 
 }
 
-form {
+/* ==================================== */
+/* 4. Estilização dos Inputs e Botão */
+/* ==================================== */
+.form-card .form-fields {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #f7f7f9; /* roxo mais elegante */
-  max-width: 50%;
-  width: 400px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  & button {
-    border-radius: 30px;
-    background-color: rgb(42, 34, 88);
-    height: 40px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 14px;
-    color: white;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease-in-out;
-  }
-
-  & button:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
-
-  & input {
-    height: 40px;
-    border-radius: 30px;
-    padding: 0 20px;
-    border: 1px solid rgb(42, 34, 88); /* borda combinando */
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-  }
-
-  & input:focus {
-    border-color: #ff9ecd; /* realce no foco */
-    box-shadow: 0 0 5px rgba(255, 158, 205, 0.5);
-  }
-
-  & .input-with-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.card {
+/* Inputs básicos estilizados */
+.form-card input {
+  background-color: rgba(255, 255, 255, 0.98);
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9ee;
+  font-size: 16px;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card input:focus {
+  border-color: #c7da72;
+  box-shadow: 0 0 0 3px rgba(199, 218, 114, 0.5);
+}
+
+/* Estilo para inputs do Material-UI, caso use */
+.form-card .MuiOutlinedInput-root {
+  border-radius: 20px;
+}
+
+.form-card .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #d9d9d9ee;
+  border-radius: 20px;
+}
+
+.form-card .MuiInputBase-input {
+  background-color: rgba(255, 255, 255, 0.986);
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+
+.form-card .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #c7da72;
+}
+
+/* Botão */
+.form-card .register-button {
+  background-color: #a9f0bf;
+  color: rgb(27, 26, 26);
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.form-card .register-button:hover {
+  background-color: #aabf31;
+}
+
+/* ==================================== */
+/* 5. Estilização da Lista de Usuários */
+/* ==================================== */
+.users-list-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f7f7f9; /* igual ao form */
-  margin: 10px;
-  width: 400px;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px 25px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #a9f0bf; /* cor do destaque */
+}
 
-  & p {
-    color: rgb(85, 80, 80);
-    font-weight: bold;
+.user-details p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.user-details p:last-child {
+  margin-bottom: 0;
+}
+
+.user-details span {
+  font-weight: 600;
+  color: #333;
+}
+
+.delete-icon {
+  color: rgb(179, 238, 139);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.delete-icon:hover {
+  color: #ff3333;
+}
+
+
+/* Pequenas telas 320 a 413 */
+@media (min-width: 320px) and (max-width: 413px) {
+  .main-container {
+    padding-left: 12vw;
+    padding-right: 12vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Telas pequenas médias 414 a 767 */
+@media (min-width: 414px) and (max-width: 767px) {
+  .main-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* MOBILE: até 767px */
+@media (max-width: 767px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;   /* margem lateral maior para evitar ficar tão colado */
+    padding-right: 10vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+    align-items: center;  /* centraliza os cards */
   }
 
-  & span {
-    font-weight: normal;
+  .form-card,
+  .users-list-card {
+    width: 100%;
+    max-width: 400px;   /* limita a largura máxima dos cards e formulário */
+    padding: 20px 15px;
   }
 
-  & button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #e85d75; /* vermelho rosado para excluir */
-    font-size: 18px;
-    transition: color 0.3s ease;
+  .header-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
   }
 
-  & button:hover {
-    color: #ff7b94; /* tom mais claro no hover */
+  .header-form .form-title {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* TABLET: 768px até 1113px */
+@media (min-width: 768px) and (max-width: 1113px) {
+  .main-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-form {
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.356); /* fundo escuro */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header-form .form-title {
+    color: #fff; /* título branco */
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+/* DESKTOP: a partir de 1114px */
+@media (min-width: 1114px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .form-card, .users-list-card {
+    flex: 1;
+    background-color: rgba(229, 238, 217, 0.678);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.356);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 0;
+  }
+
+  .header-form {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .header-form .form-title {
+    color: #333; /* título escuro */
+    background: none;
+    border-radius: 0;
+    white-space: normal;
+    width: auto;
+     font-size: 2em;
+        white-space: nowrap; /* força ficar numa linha só */
   }
 }
